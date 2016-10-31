@@ -1,0 +1,39 @@
+footer {
+    color: #666666;
+    font-weight: 100;
+    height: 35px;
+    overflow: hidden;
+
+    .remaining {
+        float: left;
+        margin: 8px 0 8px 15px;
+        width: 20%;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+            float: left;
+
+            &:first-child {
+                margin-left: 101px;
+            }
+        }
+    }
+
+    button {
+        background: #fff;
+        border: none;
+        height: 35px;
+
+        &.clear {
+            float: right;
+            padding-right: 8px;
+            width: 18%;
+            padding-left: 0;
+        }
+    }
+}

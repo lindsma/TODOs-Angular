@@ -1,0 +1,16 @@
+form {
+    input {
+        width: 100%;
+        padding: 20px 0;
+        text-indent: 50px;
+        font-size: 24px;
+        margin: 0;
+
+        &::-webkit-input-placeholder {
+            color: rgba(223, 223, 223, .7);
+            font-weight: 100;
+            font-style: italic;
+        }
+
+    }
+}
