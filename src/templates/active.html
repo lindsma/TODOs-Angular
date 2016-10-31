@@ -1,0 +1,10 @@
+<ul class='items'>
+    <li ng-repeat='items in list.allTodos' ng-hide='{{items.checked}}'>
+        <article><button class='check' ng-click="toggleComplete(items)">&#10003</button>
+            <p inline-edit="items.item"
+              inline-edit-placeholder="something something"
+              inline-edit-btn-edit=""
+              inline-edit-on-blur="save"
+              inline-edit-on-click ></p><button class='delete'>X</button></article>
+    </li>
+</ul>

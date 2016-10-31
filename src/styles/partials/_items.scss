@@ -4,7 +4,7 @@ main {
     padding: 0;
     background: #fff;
 
-    .article {
+    article {
         overflow: hidden;
         height: 50px;
         border-bottom: 1px solid rgba(223, 223, 223, .7);
@@ -49,16 +49,16 @@ main {
             }
         }
 
-        input {
-            float: left;
-            display: none;
-            height: 100%;
-            width: 90%;
-            margin-top: -20px;
-            padding: 10px 0 5px 20px;
-            font-size: 28px;
-            font-weight: 200;
-        }
+        // input {
+        //     float: left;
+        //     display: none;
+        //     height: 100%;
+        //     width: 90%;
+        //     margin-top: -20px;
+        //     padding: 10px 0 5px 20px;
+        //     font-size: 28px;
+        //     font-weight: 200;
+        // }
 
         .delete {
             display: none;

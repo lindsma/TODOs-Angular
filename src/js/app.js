@@ -8,10 +8,18 @@
       url: '/',
       abstract: true,
       template: '<ui-view></ui-view>'
-    }).state('todo.add', {
-      url: 'add',
-      // controller: listCtlr,
-      templateUrl: './todo/add/add.html'
+    }).state('todo.active', {
+      url: 'active',
+      controller: 'ListController as list',
+      templateUrl: './src/templates/active.html'
+    }).state('todo.completed', {
+      url: 'completed',
+      controller: 'ListController as list',
+      templateUrl: './src/templates/completed.html'
+    }).state('todo.all', {
+      url: 'all',
+      controller: 'ListController as list',
+      templateUrl: './src/templates/all.html'
     });
 
   });
