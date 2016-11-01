@@ -24,7 +24,6 @@ angular.module('todo').service('storageService', function(localStorageService) {
         var itemUpdate = findItemById(allTodos, todoObj.id);
         angular.copy(todoObj, itemUpdate);
         setTodos(allTodos);
-
     }
 
     function updateTotal(allTodos) {
@@ -43,7 +42,15 @@ angular.module('todo').service('storageService', function(localStorageService) {
               allTodos.splice(index,1);
           }
       }
+      setTodos(allTodos);
       return allTodos;
+    }
+
+    function removeItem(item, array) {
+      var index = array.indexOf(item);
+      array.splice(index, 1);
+      setTodos(allTodos);
+      return array;
     }
 
 
@@ -53,6 +60,7 @@ angular.module('todo').service('storageService', function(localStorageService) {
         set: setTodos,
         toggleComplete: toggleComplete,
         updateTotal: updateTotal,
-        removeComplete: removeComplete
+        removeComplete: removeComplete,
+        removeItem: removeItem
     };
 });

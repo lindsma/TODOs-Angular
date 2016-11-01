@@ -2,7 +2,6 @@ angular.module('todo').controller('ListController', function($state, storageServ
   this.allTodos = storageService.get();
 
   $scope.processForm = function(item) {
-    this.allTodos = storageService.get();
     $scope.formData = {
       item: item,
       checked: false,
@@ -10,12 +9,11 @@ angular.module('todo').controller('ListController', function($state, storageServ
     };
     this.allTodos.push($scope.formData);
     storageService.set(this.allTodos);
-    $scope.updateTotal();
   };
 
   $scope.toggleComplete = function(todoObj) {
     storageService.toggleComplete(todoObj);
-    $scope.updateTotal();
+    $scope.updateTotal(this.allTodos);
   };
 
   $scope.updateTotal = function() {
@@ -27,8 +25,11 @@ angular.module('todo').controller('ListController', function($state, storageServ
   $scope.removeComplete = function() {
     this.allTodos = storageService.get();
     this.allTodos = storageService.removeComplete(this.allTodos);
-    storageService.set(this.allTodos);
-    console.log('in list');
+  };
+
+  $scope.removeItem = function(item) {
+    this.allTodos = storageService.get();
+    this.allTodos = storageService.removeItem(item, this.allTodos);
   };
 
   $scope.updateTotal();
