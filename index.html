@@ -5,7 +5,7 @@
     <meta charset='UTF-8'>
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <title>TODOs in Angular</title>
-    <link rel="stylesheet" href="bower_components/ng-inline-edit/dist/ng-inline-edit.min.css">
+    <!-- <link rel="stylesheet" href="bower_components/ng-inline-edit/dist/ng-inline-edit.min.css"> -->
     <link rel="stylesheet" href="lib/styles/main.min.css">
 
 </head>
@@ -19,8 +19,8 @@
             <input name='item' ng-model='todoItem' type='text' class='new-todo' placeholder='What needs to be done?'>
         </form>
         <ui-view></ui-view>
-        <footer>
-            <p class='remaining'><span class='incomplete-items'>0</span> items left</p>
+        <footer ng-cloak>
+            <p class='remaining'><span class='incomplete-items'>{{count}}</span> items left</p>
             <nav>
                 <ul>
                     <li><button class='show-all active' ui-sref='todo.all'>All</button></li>
@@ -28,7 +28,7 @@
                     <li><button class='show-completed' ui-sref='todo.completed'>Completed</button></li>
                 </ul>
             </nav>
-            <button class='clear'>Clear completed</button>
+            <button class='clear' ng-click='removeComplete()'>Clear completed</button>
         </footer>
     </main>
 
@@ -36,10 +36,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
     <script src="angular-ui-router/release/angular-ui-router.min.js"></script>
     <script src="angular-local-storage/dist/angular-local-storage.min.js"></script>
-    <script src="bower_components/ng-inline-edit/dist/ng-inline-edit.min.js"></script>
+    <!-- <script src="bower_components/ng-inline-edit/dist/ng-inline-edit.min.js"></script> -->
     <script src="lib/js/app.js"></script>
     <script src="src/js/services/storage.service.js"></script>
-    <script src="src/js/controllers/addItem.controller.js"></script>
+    <script src="src/js/controllers/list.controller.js"></script>
 
 </body>
 

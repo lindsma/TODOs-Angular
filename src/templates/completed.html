@@ -1,6 +1,6 @@
 <ul class='items'>
     <li ng-repeat='items in list.allTodos' ng-show='{{items.checked}}'>
-        <article><button class='check complete' ng-click="toggleComplete(items)">&#10003</button>
-            <p>{{items.item}}</p><button class='delete'>X</button></article>
+        <article class='list-item'><button ng-class="{'complete' : items.checked}" class='check' ng-click="toggleComplete(items)">&#10003</button>
+            <p ng-class="{'complete' : items.checked}">{{items.item}}</p><button class='delete'>X</button></article>
     </li>
 </ul>

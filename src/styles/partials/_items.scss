@@ -4,11 +4,10 @@ main {
     padding: 0;
     background: #fff;
 
-    article {
+    .list-item {
         overflow: hidden;
         height: 50px;
         border-bottom: 1px solid rgba(223, 223, 223, .7);
-        padding-top: 20px;
 
         &:hover .delete {
             display: block;
@@ -28,16 +27,22 @@ main {
             border: 1px solid #d3d3d3;
             float: left;
             color: #fff;
-            margin-left: 5px;
+            margin: 10px 0 0 5px;
             font-size: 22px;
 
             &.complete {
                 color: #4cbb17;
             }
+
+            &.complete p {
+              text-decoration: line-through;
+              color: #DFDFDF;
+            }
         }
 
         p {
             float: left;
+            line-height: 50px;
             margin: 0 0 0 20px;
             font-size: 28px;
             color: #333333;
@@ -66,7 +71,7 @@ main {
             height: 30px;
             background: #fff;
             float: right;
-            margin-right: 20px;
+            margin: 10px 20px 0 0;
             border: none;
             color: #7F0000;
             font-size: 23px;
