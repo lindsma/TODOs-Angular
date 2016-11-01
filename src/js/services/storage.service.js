@@ -49,7 +49,7 @@ angular.module('todo').service('storageService', function(localStorageService) {
     function removeItem(item, array) {
       var index = array.indexOf(item);
       array.splice(index, 1);
-      setTodos(allTodos);
+      setTodos(array);
       return array;
     }
 
